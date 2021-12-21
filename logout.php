@@ -1,0 +1,9 @@
+<?php
+    if(!isset($_COOKIE["user"])){ 
+        header("location:login.php");
+    }
+	else{
+		setcookie("user",$email,time()-1);
+		header("location:index.php");
+	}
+?>		
